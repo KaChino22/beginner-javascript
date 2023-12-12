@@ -29,7 +29,7 @@ pic.classList.remove('cool');
 console.log(pic.classList);
 
 function toggleRound() {
-  pic.classList.toggle('round');
+    pic.classList.toggle('round');
 }
 
 pic.addEventListener('click', toggleRound);
@@ -45,6 +45,6 @@ pic.width = 200;
 const custom = document.querySelector('.custom');
 console.log(custom.dataset);
 
-custom.addEventListener('click', function() {
-  alert(`Welcome ${custom.dataset.name} ${custom.dataset.last} `);
+custom.addEventListener('click', () => {
+    alert(`Welcome ${custom.dataset.name} ${custom.dataset.last} `);
 });

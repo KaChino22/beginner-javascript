@@ -1,16 +1,16 @@
 {
   "name": "beginner-javascript",
   "version": "1.0.0",
-  "description": "Starter Files and Solutions for the BeginnerJavaScript.com Course",
+  "description": "",
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wesbos/beginner-javascript.git"
+  "scripts": {
+    "lint": "eslint .",
+  "lint:fix": "eslint . --fix"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/wesbos/beginner-javascript/issues"
-  },
-  "homepage": "https://github.com/wesbos/beginner-javascript#readme"
+  "dependencies": {
+    "eslint-config-wesbos": "^4.0.1"
+  }
 }

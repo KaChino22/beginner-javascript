@@ -6,18 +6,18 @@ import { intersection, isEqual } from 'lodash';
 import to from 'await-to-js';
 
 const fakeNames = Array.from(
-  { length: 10 },
-  () => `${name.firstName()} ${name.lastName()}`
+    { length: 10 },
+    () => `${name.firstName()} ${name.lastName()}`,
 );
 
 async function go() {
-  console.log('Going!');
-  await wait(200);
-  console.log('ending!');
+    console.log('Going!');
+    await wait(200);
+    console.log('ending!');
 }
 
 const diff = formatDistance(new Date(), new Date(2020, 3, 4, 10, 32, 0), {
-  addSuffix: true,
+    addSuffix: true,
 }); //= > 'in about 1 hour'
 console.log(diff);
 
@@ -28,12 +28,12 @@ const formatted = format(date, `LLLL 'the' do y`);
 console.log(formatted);
 
 async function getJoke() {
-  const { data } = await axios.get('https://icanhazdadjoke.com', {
-    headers: {
-      Accept: 'application/json',
-    },
-  });
-  console.log(data);
+    const { data } = await axios.get('https://icanhazdadjoke.com', {
+        headers: {
+            Accept: 'application/json',
+        },
+    });
+    console.log(data);
 }
 
 // getJoke();
@@ -50,23 +50,23 @@ const person2 = { name: 'wes' };
 console.log(isEqual(person1, person2));
 
 function checkIfNameIsCool(firstName) {
-  return new Promise(function(resolve, reject) {
-    if (firstName === 'Wes') {
-      resolve('Cool name');
-      return;
-    }
-    reject(new Error('Bad Name'));
-  });
+    return new Promise((resolve, reject) => {
+        if (firstName === 'Wes') {
+            resolve('Cool name');
+            return;
+        }
+        reject(new Error('Bad Name'));
+    });
 }
 
 async function checkName() {
-  const [err, successValue] = await to(checkIfNameIsCool('snickers'));
-  if (err) {
-    // deal with it
-    console.log(err);
-  } else {
-    console.log(successValue);
-  }
+    const [err, successValue] = await to(checkIfNameIsCool('snickers'));
+    if (err) {
+        // deal with it
+        console.log(err);
+    } else {
+        console.log(successValue);
+    }
 }
 
 checkName();
