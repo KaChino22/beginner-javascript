@@ -1,20 +1,16 @@
 {
   "name": "beginner-javascript",
   "version": "1.0.0",
-  "description": "![](https://res.cloudinary.com/wesbos/image/upload/v1574876851/BJS/BJS-Social-Share.png)",
+  "description": "",
   "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+  "lint:fix": "eslint . --fix"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "eslint": "^8.55.0",
     "eslint-config-wesbos": "^4.0.1"
-  },
-  "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
-  },
-  "devDependencies": {
-    "prettier": "^3.1.1"
   }
 }
